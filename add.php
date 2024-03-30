@@ -14,9 +14,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
     $phoneNumber = $_POST["phone_number"];
 
-    $statement = $conn->prepare("INSERT INTO contacts (name, phone_number) VALUES (:name,:phone_nnumber)");
+    $statement = $conn->prepare("INSERT INTO contacts (name, phone_number) VALUES (:name,:phoneNumber)");
     $statement->bindParam(":name", $_POST["name"]);
-    $statement->bindParam(":number", $_POST["phone_number"]);
+    $statement->bindParam(":phoneNumber", $_POST["phone_number"]);
     $statement->execute();
 
     header("Location: index.php");
