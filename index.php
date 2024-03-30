@@ -65,7 +65,7 @@ $contacts = $conn->query("SELECT * FROM contacts");
               <div class="card-body">
                 <h3 class="card-title text-capitalize"> <?= $name ?> </h3>
                 <p class="m-2"><?= $cell ?></p>
-                <a href="#" class="btn btn-secondary mb-2">Edit Contact</a>
+                <a href="edit.php?id=<?= $contact["id"] ?>" class="btn btn-secondary mb-2">Edit Contact</a>
                 <a href="delete.php?id=<?= $contact["id"] ?>" class="btn btn-danger mb-2">Delete Contact</a>
               </div>
             </div>
