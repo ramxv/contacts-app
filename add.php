@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $statement->bindParam(":phoneNumber", $_POST["phone_number"]);
     $statement->execute();
 
-    header("Location: index.php");
+    header("Location: home.php");
   }
 }
 
